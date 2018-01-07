@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle markdown-book-preview",
+        "command": "markdown-book-preview:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "markdown-book-preview",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "markdown-book-preview:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
