@@ -3,16 +3,14 @@
   "main": "./lib/markdown-book-preview",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "markdown-book-preview:toggle"
   },
-  "repository": "https://github.com/atom/markdown-book-preview",
+  "repository": "https://github.com/lwohtsu/atom-markdown-book-preview",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
