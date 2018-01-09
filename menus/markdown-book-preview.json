@@ -2,7 +2,7 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Open markdown-book-preview",
+        "label": "MDBP:Open markdown-book-preview",
         "command": "markdown-book-preview:toggle"
       }
     ]
@@ -12,7 +12,7 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "markdown-book-preview",
+          "label": "MDBP:markdown-book-preview",
           "submenu": [
             {
               "label": "open Preview",

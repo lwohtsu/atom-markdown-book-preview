@@ -1,7 +1,7 @@
 {
-  "name": "markdown-book-preview",
+  "name": "MDBP-markdown-book-preview",
   "main": "./lib/markdown-book-preview",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {
