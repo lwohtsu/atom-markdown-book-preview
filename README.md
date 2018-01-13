@@ -2,7 +2,7 @@
 Atom Package markdown preview with VivlioStyle
 
 書籍の原稿作成に適したMarkdownプレビューのAtomパッケージです。
-VivlioStyle Viewerと組み合わせて書籍の体裁で表示し、原稿データをInDesign向けにXMLを書き出す機能を持ちます。
+VivlioStyle Viewerと組み合わせて書籍の体裁で表示し、原稿データをInDesign向けのXMLファイルとして書き出す機能を持ちます。
 
 Atomパッケージのもとになった単体アプリ版は、すでに数十冊のIT解説書の制作に使用しています。
 http://libroworks.co.jp/?p=838
