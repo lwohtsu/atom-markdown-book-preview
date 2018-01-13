@@ -1,9 +1,13 @@
 {
   "name": "MDBP-markdown-book-preview",
   "main": "./lib/markdown-book-preview",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Atom Package markdown preview with VivlioStyle",
-  "keywords": ["markdown", "preview", "VivlioStyle"],
+  "keywords": [
+    "markdown",
+    "preview",
+    "VivlioStyle"
+  ],
   "activationCommands": {
     "atom-workspace": [
       "markdown-book-preview:toggle",
