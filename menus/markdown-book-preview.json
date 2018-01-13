@@ -2,8 +2,25 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "MDBP:Open markdown-book-preview",
-        "command": "markdown-book-preview:toggle"
+        "label": "MDBP:markdown-book-preview",
+        "submenu": [
+          {
+            "label": "Open HTML preview",
+            "command": "markdown-book-preview:toggle"
+          },
+          {
+            "label": "Open VivlioStyle Preview",
+            "command": "markdown-book-preview:toggleVS"
+          },
+          {
+            "label": "Print PDF",
+            "command": "markdown-book-preview:printPDF"
+          },
+          {
+            "label": "Export InDesign XML",
+            "command": "markdown-book-preview:exportXML"
+          }
+        ]
       }
     ]
   },
@@ -15,8 +32,20 @@
           "label": "MDBP:markdown-book-preview",
           "submenu": [
             {
-              "label": "open Preview",
+              "label": "Open HTML Preview",
               "command": "markdown-book-preview:toggle"
+            },
+            {
+              "label": "Open VivlioStyle Preview",
+              "command": "markdown-book-preview:toggleVS"
+            },
+            {
+              "label": "Print PDF",
+              "command": "markdown-book-preview:printPDF"
+            },
+            {
+              "label": "Export InDesign XML",
+              "command": "markdown-book-preview:exportXML"
             }
           ]
         }
