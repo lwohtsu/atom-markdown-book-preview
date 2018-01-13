@@ -1,12 +1,14 @@
 {
   "name": "MDBP-markdown-book-preview",
   "main": "./lib/markdown-book-preview",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "markdown-book-preview:toggle",
-    "atom-workspace": "markdown-book-preview:toggleVS"
+    "atom-workspace": [
+      "markdown-book-preview:toggle",
+      "markdown-book-preview:toggleVS"
+    ]
   },
   "repository": "https://github.com/lwohtsu/atom-markdown-book-preview",
   "license": "MIT",

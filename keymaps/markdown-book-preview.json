@@ -1,5 +1,6 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "markdown-book-preview:toggle"
+      "ctrl-alt-m": "markdown-book-preview:toggle",
+      "ctrl-alt-shift-m": "markdown-book-preview:toggleVS"
   }
 }
