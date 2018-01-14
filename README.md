@@ -1,6 +1,4 @@
 # MDBP: atom-markdown-book-preview
-Atom Package markdown preview with VivlioStyle
-
 書籍の原稿作成に適したMarkdownプレビューのAtomパッケージです。
 VivlioStyle Viewerと組み合わせて書籍の体裁で表示し、原稿データをInDesign向けのXMLファイルとして書き出す機能を持ちます。
 
