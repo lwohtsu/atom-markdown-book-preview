@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/*リセット*/
+html {
+  orphans: 1;
+  widows: 1;
+  font-size: 0.25mm;  /*remで級数指定できる*/
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*ページサイズ*/
+@page{
+  size: 182mm 257mm; /*B5正寸*/
+}
+
+/*ページテンプレート（マスターページ）*/
+@-epubx-page-template {
+  @-epubx-page-master {
+    -epubx-utilization: 0.1;
+    /*background: #f6f2ef;*/
+
+    /*本文領域*/
+    @-epubx-partition content-area {
+      -epubx-flow-from: body;
+      position: absolute;
+      top: 16mm;
+      left: 35mm;
+      width: 125mm;
+      height: 225mm;
+      overflow: visible;
+      background: #DDD;
+    }
+    /*ノンブル（柱より前に書く必要あり？）*/
+    @-epubx-partition{
+      content: counter(page);
+      position: absolute;
+      text-align: center;
+      width: 182mm;
+      height: 5mm;
+      left: 0;
+      bottom: 0mm;
+      padding-bottom: 2mm;
+      background: #fee;
+      font-size: 12rem;
+      color: #000000;
+    }
+    /*柱の指定*/
+    @-epubx-partition{
+      /* 奇数ページ */
+      -epubx-enabled: -epubx-expr( page-number % 2 == 1 );
+      -epubx-flow-from: header2;
+      position: absolute;
+      height: 7.1mm;
+      top:4mm;
+      right: 22mm;
+      text-align: right;
+    }
+  }
+}
+/* h2を柱に流し込む指定 */
+h2{
+  -epubx-flow-into: header2;
+}
+
+body{
+  width: 125mm;
+  font-size: 12rem;
+  line-height: 22rem;
+  margin: auto;
+  font-family: 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Roboto, Verdana, "游ゴシック", "YuGothic", Meiryo, sans-serif;
+  counter-reset: secheader;
+  /*background: #EDD;*/
+}
+
+/* 本文 */
+p{
+  text-align: justify;
+}
+
+/* カバーページ */
+.coverpage{
+  background: #eff;
+  page-break-after: always;
+}
+
+/* 強制改ページ指定*/
+.pagebreak{
+  border: none;
+  page-break-after: always;
+}
