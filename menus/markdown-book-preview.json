@@ -19,8 +19,11 @@
           {
             "label": "Export InDesign XML",
             "command": "markdown-book-preview:exportXML"
-          }
-        ]
+          },
+          {
+            "label": "Download Template",
+            "command": "markdown-book-preview:downloadTemplate"
+          }        ]
       }
     ]
   },
@@ -46,6 +49,10 @@
             {
               "label": "Export InDesign XML",
               "command": "markdown-book-preview:exportXML"
+            },
+            {
+              "label": "Download Template",
+              "command": "markdown-book-preview:downloadTemplate"
             }
           ]
         }
