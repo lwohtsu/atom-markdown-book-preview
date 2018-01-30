@@ -12,7 +12,7 @@
     "r": "<hr class=\"pagebreak\">"
   },
   {
-    "f": "【ネガティブ(\\d+)】",
+    "f": "@negative:(\\d+)",
     "r": "<div style=\"margin-top:-$1mm\"><\/div>"
   },
   {
