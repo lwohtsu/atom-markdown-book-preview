@@ -86,6 +86,10 @@ p{
   background: #eff;
   page-break-after: always;
 }
+.secheader{
+  border: solid 0.15mm #888;
+  page-break-before: always;
+}
 
 /* 強制改ページ指定*/
 .pagebreak{
