@@ -16,10 +16,6 @@ html {
   font-family: inconsolata;
   src: url("inconsolata.otf");
 }
-@font-face{
-  font-family: keyfont;
-  src: url("keyfont.ttf");
-}
 
 /*ページサイズ*/
 @page{
