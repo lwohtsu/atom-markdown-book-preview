@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+/*リセット*/
+html {
+  orphans: 1;
+  widows: 1;
+  font-size: 0.25mm;  /*qで級数指定できる*/
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face{
+  font-family: inconsolata;
+  src: url("inconsolata.otf");
+}
+@font-face{
+  font-family: keyfont;
+  src: url("keyfont.ttf");
+}
+
+/*ページサイズ*/
+@page{
+  size: 148mm 210mm; /*A5正寸*/
+}
+
+/*ページテンプレート（マスターページ）*/
+@-epubx-page-template {
+  @-epubx-page-master {
+    -epubx-utilization: 0.1;
+    /*background: #f6f2ef;*/
+
+    /*本文領域*/
+    @-epubx-partition content-area {
+      -epubx-flow-from: body;
+      position: absolute;
+      top: 14mm;
+      left: 17mm;
+      width: 116mm;
+      height: 180mm;
+      overflow: visible;
+      /* background: #DDD; */
+    }
+    /*ノンブル（柱より前に書く必要あり？）*/
+    @-epubx-partition{
+      -epubx-enabled: -epubx-expr( page-number > 1 );
+      content: counter(page);
+      position: absolute;
+      text-align: center;
+      width: 148mm;
+      height: 5mm;
+      left: 0;
+      bottom: 2mm;
+      padding-bottom: 2mm;
+      /* background: #fee; */
+      font-size: 12rem;
+      color: #000000;
+    }
+    /*柱の指定*/
+    @-epubx-partition{
+      /* 奇数ページ */
+      -epubx-enabled: -epubx-expr( page-number % 2 == 1 );
+      -epubx-flow-from: header2;
+      position: absolute;
+      height: 7.1mm;
+      top:4mm;
+      right: 22mm;
+      text-align: right;
+    }
+  }
+}
+/* h2を柱に流し込む指定（ただし本文領域から消滅）*/
+/* h2{
+  -epubx-flow-into: header2;
+} */
+
+body{
+  width: 116mm;
+  font-size: 13rem;
+  line-height: 22rem;
+  margin: auto;
+  font-family: "Noto Serif CJK JP", "Hiragino Kaku Gothic ProN", Roboto, Verdana, "游ゴシック", YuGothic, Meiryo, sans-serif;
+  counter-reset: secheader;
+  /*background: #EDD;*/
+}
+
+/* 強制改ページ指定*/
+.pagebreak{
+  visibility: hidden;
+  page-break-after: always;
+}
+
+/* 本文 */
+p{
+  text-align: justify;
+  font-size: 13rem;
+  line-height: 22rem;
+  text-indent: 1em;
+  font-family: "Noto Serif CJK JP", serif;
+}
+strong{
+  font-family: "Noto Sans CJK JP Medium", sans-serif;
+  background: #ff0;
+  font-weight: 500;
+}
+
+/* 箇条書き */
+ul {
+  font-family: "Noto Sans CJK JP Medium";
+  margin-top: 11rem;
+  margin-bottom: 11rem;
+  margin-left: 2em;
+}
+
+/* 表 */
+table{
+  border-collapse: collapse;
+  margin-top: 3mm;
+  font-family: "Noto Sans CJK JP Regular", sans-serif;
+  /*margin-left: -8.6mm;*/
+}
+th, td{
+  font-size: 11rem;
+  line-height: 3.75mm;
+  padding: 1mm 1.5mm 1mm 1.5mm;
+  border: solid 0.25mm #888;
+}
+th{
+  background: #9bcb60;
+  min-width: 36mm;
+}
+td{
+  font-family: "Noto Sans CJK JP DemiLight", sans-serif;
+}
+
+/* カバーページ */
+.coverpage{
+  background: #9bcb60;
+  page-break-after: always;
+  padding-top: 54mm;
+  padding-left: 37mm;
+  height: 160mm;
+  width: 148mm;
+  margin-top: -14mm;
+  margin-left: -17mm;
+}
+h1{
+  font-size: 32rem;
+  line-height: 50rem;
+  font-family: "Noto Sans CJK JP Bold", sans-serif;
+  width: 16em;
+  counter-reset: secheader 1;
+}
+
+/* 節見出し */
+.secheader{
+  height: 30mm;
+  margin-top: -7mm;
+  margin-bottom: 7mm;
+  padding-top: 7mm;
+  padding-left: 18.5mm;
+  page-break-before: always;
+  /* background: #eee; */
+  position: relative;
+  counter-increment: secheader;
+}
+
+/* 見出し類 */
+h2{
+  font-size: 29rem;
+  line-height: 35rem;
+  font-family: "Noto Sans CJK JP Medium", sans-serif;
+  border-left: solid 1mm #1a714c;
+  padding-left: 4.5mm;
+  margin-left: 4.5mm;
+  width: 97.5mm;
+  height: 16mm;
+  display: table-cell;
+  vertical-align: middle;
+}
+h2::before{
+  content: counter(secheader, decimal-leading-zero);
+  color: #1a714c;
+  position: absolute;
+  top: 8mm;
+  left: 4mm;
+  width: 18.5mm;
+}
+
+h3{
+  font-size: 16rem;
+  line-height: 40rem;
+  font-family: "Noto Sans CJK JP Medium", sans-serif;
+  color: #1a714c;
+}
+
+h4{
+  font-size: 13rem;
+  margin-top: 22rem;
+  line-height: 22rem;
+  font-family: "Noto Sans CJK JP Medium", sans-serif;
+}
+h4:first-child, .pagebreak+h4{
+  margin-top: 0;
+}
+
+/*ソースコード*/
+/*h6はソースコードタイトル*/
+h6{
+  font-family: "Noto Sans CJK JP Medium", sans-serif;
+  font-size: 13rem;
+  line-height: 5.5mm;
+  height: 5.5mm;
+  position: relative;
+  padding-left: 7mm;
+  margin-top: 3.6mm;
+}
+h6::before{
+  content: " ";
+  background: #9bcb60;
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 5.5mm;
+  height: 5.5mm;
+}
+h6:first-child, .pagebreak+h6{
+  margin-top: 0;
+}
+pre{
+  font-size: 12rem;
+  line-height: 24rem;
+  background: #eae4d1;
+  margin-top: 3.6mm;
+  margin-bottom: 4mm;
+  padding: 1.5mm;
+  overflow: visible;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inconsolata;
+  border-top: solid 0.3mm #1a714c;
+}
+pre code{
+  font-family: inconsolata;
+}
+/* コード内コメントのカラー */
+.hljs-comment{
+  color: #555;
+}
+/* コード内引き出し線 */
+.codered{
+  background: #f00;
+  color: #fff;
+  font-size: 9rem;
+  line-height: 12rem;
+  position: relative;
+  padding: 0 1mm 0.5mm 1mm;
+  font-family: "Noto Sans CJK JP Medium", sans-serif;
+}
+.codered::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10mm;
+  top: 1.75mm;
+  left: -10mm;
+  border-bottom: solid 0.25mm #f00;
+}
+h6 + pre{
+  margin-top: 0.5mm;
+}
+
+/* 図版領域 */
+.figure{
+  display: flex;
+  flex-direction: row;     /*横並びにする*/
+  align-items: flex-end; /*縦に伸ばさない*/
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 5.5mm;
+  margin-bottom: 5.5mm;
+}
+.figure svg{
+  border: solid 0.2mm #888;
+}
+/* 図中文字 */
+.figure ul{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-family: "Noto Sans CJK JP Medium";
+  list-style-type: none;
+  color: #000;
+  max-width: 13em;
+  margin: 0;
+  padding-left: 0;
+}
+.figure li{
+  margin-bottom: 3.5mm;
+}
+.akakome{
+  text-indent: -1em;
+}
+.figure .akakome::first-letter{
+  color: #f00;
+}
+li.aokome{
+  text-indent: -1em;
+}
+.figure .aokome::first-letter{
+  color: #00f;
+}
+
+/* コラムパーツ */
+.column{
+  padding: 3.5mm;
+  border: solid 1px #9bcb60;
+  border-radius: 2mm;
+  margin-top: 7.5mm;
+}
+.column p{
+  text-indent: 0;
+  font-size: 11rem;
+  line-height: 16rem;
+  font-family: "Noto Sans CJK JP DemiLight", sans-serif;
+}
+.column:first-child, .pagebreak+.column {
+  margin-top: 0;
+}
+.column h5{
+  font-size: 15rem;
+  line-height: 15rem;
+  margin: 0;
+  margin-bottom: 2mm;
+  font-family: "Noto Sans CJK JP Medium", sans-serif;
+}

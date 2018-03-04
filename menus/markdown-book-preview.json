@@ -21,9 +21,14 @@
             "command": "markdown-book-preview:exportXML"
           },
           {
-            "label": "Download Template",
+            "label": "Download Template (simple)",
             "command": "markdown-book-preview:downloadTemplate"
-          }        ]
+          },
+          {
+            "label": "Download Template (A5ver1)",
+            "command": "markdown-book-preview:downloadTemplateA5V1"
+          }
+        ]
       }
     ]
   },
@@ -51,8 +56,12 @@
               "command": "markdown-book-preview:exportXML"
             },
             {
-              "label": "Download Template",
+              "label": "Download Template (simple)",
               "command": "markdown-book-preview:downloadTemplate"
+            },
+            {
+              "label": "Download Template (A5ver1)",
+              "command": "markdown-book-preview:downloadTemplateA5V1"
             }
           ]
         }
