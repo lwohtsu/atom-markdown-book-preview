@@ -1,70 +1,55 @@
-<!DOCTYPE html><html><head>
-    <title>doc</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="_css/booksample.css">
-  </head>
-  <body>
-<div class="coverpage">
-Chapter 1<p></p>
-<h1 id="-">章タイトル</h1>
-</div>
-<div class="secheader"><h2 id="-">セクションタイトル二行にしても大丈夫</h2></div>
-<h3 id="excel-">Excelの外で入力された文字にはふりがなが設定されない</h3>
+<?xml version="1.0" encoding="UTF-8"?><story xmlns:aid5="http://ns.adobe.com/AdobeInDesign/5.0/" xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0/"><body>
+<div_coverpage>
+Chapter 1<p_coverpage/>
+<h1_coverpage>章タイトル</h1_coverpage>
+</div_coverpage>
+<div_secheader><h2_secheader>セクションタイトル二行にしても大丈夫</h2_secheader></div_secheader>
+<h3>Excelの外で入力された文字にはふりがなが設定されない</h3>
 <p><strong>PHONETIC関数</strong>やふりがな表示をオンにしても、ふりがなが表示されない。あるいは、氏名の列を並べ替えしても、なぜか50音順にならない。これらはすべて、元のセルにフリガナが設定されていないがゆえに起きる。</p>
 <p>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。</p>
-<div class="figure">
-<svg width="70mm" height="70mm" viewBox="0 0 70 70">
-<image width="408.869" height="307.622" href="img0/ch0-1-1.png" transform="translate(0,0) scale(0.28)"> 
-</image></svg> 
+<div_figure><svg><img href="file://img0/ch0-1-1.png" translate-x="0" translate-y="0" scale="0.28" width="70mm" height="70mm"/></svg> 
 
 <ul>
-<li class="akakome"><span>❶</span>PowerShellのフォントサイズは24に変更</li>
-<li class="akakome"><span>❷</span>倍率28%で貼り付け</li>
-<li class="aokome"><span>▶</span>リストの先頭に▶を書くと青コメ（結果or注意）になります
-</li></ul></div>
+<ul_li_akakome><span>❶</span>PowerShellのフォントサイズは24に変更</ul_li_akakome>
+<ul_li_akakome><span>❷</span>倍率28%で貼り付け</ul_li_akakome>
+<ul_li_aokome><span>▶</span>リストの先頭に▶を書くと青コメ（結果or注意）になります
+</ul_li_aokome></ul></div_figure>
 
-<h3 id="-">ページ頭にはなるべく見出しを入れたいです</h3>
+<h3>ページ頭にはなるべく見出しを入れたいです</h3>
 <p>なかなか難しいところではありますが。</p>
-<h4 id="-">小見出しはたまにあってもよいぐらいでお願いします</h4>
-<div class="figure">
-<svg width="63.923mm" height="75.212mm" viewBox="0 0 63.923 75.212">
-<image width="159.808" height="188.031" href="img0/ch0-1-2.png" transform="translate(0,0) scale(0.4)"> 
-</image></svg> 
+<h4>小見出しはたまにあってもよいぐらいでお願いします</h4>
+<div_figure><svg><img href="file://img0/ch0-1-2.png" translate-x="0" translate-y="0" scale="0.4" width="63.923mm" height="75.212mm"/></svg> 
 
 <ul>
-<li class="akakome"><span>❶</span>PowerShellのプロパティを表示</li>
-<li class="akakome"><span>❷</span>［サイズ］を24に設定</li>
-<li class="aokome"><span>▶</span>ダイアログ類は40%ぐらいで貼ったほうが見やすいです
-</li></ul></div>
+<ul_li_akakome><span>❶</span>PowerShellのプロパティを表示</ul_li_akakome>
+<ul_li_akakome><span>❷</span>［サイズ］を24に設定</ul_li_akakome>
+<ul_li_aokome><span>▶</span>ダイアログ類は40%ぐらいで貼ったほうが見やすいです
+</ul_li_aokome></ul></div_figure>
 
 <p>本文テキスト。本文テキスト。本文テキスト。本文テキスト。本文テキスト。本文テキスト。本文テキスト。</p>
-<h6 id="sample-py">sample.py</h6>
-<pre><code class="lang-python"><span class="hljs-comment"># 通常コメント</span>
-<span class="hljs-keyword">for</span> cnt <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
-    print(cnt)        <span class="hljs-comment codered">コメントの先頭に←を入れると引き出し線になります</span>
-print(<span class="hljs-string">"done"</span>)         <span class="hljs-comment codered">折り返しはなしにしたいところです</span>
-</code></pre>
-
+<h6>sample.py</h6>
+<pre><code_lang-python><span_hljs-comment># 通常コメント</span_hljs-comment>
+<span_hljs-keyword>for</span_hljs-keyword> cnt <span_hljs-keyword>in</span_hljs-keyword> range(<span_hljs-number>10</span_hljs-number>):
+    print(cnt)        <span_hljs-comment_codered>コメントの先頭に←を入れると引き出し線になります</span_hljs-comment_codered>
+print(<span_hljs-string>"done"</span_hljs-string>)         <span_hljs-comment_codered>折り返しはなしにしたいところです</span_hljs-comment_codered>
+</code_lang-python></pre>
 <p>ソースコードのあとの文章。</p>
-<div class="secheader"><h2 id="2-">2つめのセクション</h2></div>
-<h3 id="-">また中見出しです</h3>
+<div_secheader><h2_secheader>2つめのセクション</h2_secheader></div_secheader>
+<h3>また中見出しです</h3>
 <p><strong>箇条書きのデザイン</strong>を決めます。本文テキスト。本文テキスト。本文テキスト。本文テキスト。本文テキスト。本文テキスト。本文テキスト。</p>
 <ul>
-<li>箇条書きアイテム1</li>
-<li>箇条書きアイテム2</li>
-<li>箇条書きアイテム3</li>
-<li>箇条書きアイテム4</li>
+<ul_li>箇条書きアイテム1</ul_li>
+<ul_li>箇条書きアイテム2</ul_li>
+<ul_li>箇条書きアイテム3</ul_li>
+<ul_li>箇条書きアイテム4</ul_li>
 </ul>
 <p>表組みのデザインを決めます。。本文テキスト。本文テキスト。本文テキスト。本文テキスト。本文テキスト。本文テキスト。本文テキスト。</p>
-<h4 id="-h4-">表のタイトルが必要な場合は小見出しと同じh4を使用</h4>
+<h4>表のタイトルが必要な場合は小見出しと同じh4を使用</h4>
 <table>
-<thead>
 <tr>
-<th>Header One</th>
-<th>Header Two</th>
+<td>Header One</td>
+<td>Header Two</td>
 </tr>
-</thead>
-<tbody>
 <tr>
 <td>Item One</td>
 <td>Item Two</td>
@@ -77,15 +62,14 @@ print(<span class="hljs-string">"done"</span>)         <span class="hljs-comment
 <td>Item One</td>
 <td>Item Two表は必ず2行になるパターンを想定。長いテキストが入ることはよくあります。</td>
 </tr>
-</tbody>
 </table>
-<div class="column">
-<h5 id="-h5">コラムの見出しはh5</h5>
-<p>コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。
-</p></div>
-<hr class="pagebreak">
+<div_column>
+<h5_column>コラムの見出しはh5</h5_column>
+<p_column>コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。コラムテキスト。
+</p_column></div_column>
+<hr_pagebreak/>
 <p>ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□ダミーテキ■ダミーテキ□</p>
 
   
 
-</body></html>
+</body></story>

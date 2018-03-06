@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><story xmlns:aid5="http://ns.adobe.com/AdobeInDesign/5.0/" xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0/"><body>
+<div_coverpage><h1_coverpage>章タイトル</h1_coverpage><p_coverpage>本文</p_coverpage></div_coverpage>
+
+<div_secheader><h2_secheader>節タイトル</h2_secheader><p_secheader>本文</p_secheader></div_secheader>
+
+<p>本文</p>
+<hr_pagebreak/>
+<p>本文</p>
+
+  
+
+</body></story>
