@@ -1,6 +1,6 @@
 @div:coverpage
 Chapter 1
-# 章タイトル
+# 章タイトル Chapter 1直下のMarkdown
 @divend
 
 ## セクションタイトル二行にしても大丈夫
