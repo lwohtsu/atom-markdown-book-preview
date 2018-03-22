@@ -1,5 +1,4 @@
-[
-  {
+[{
     "selector": "h1",
     "method": "wrapWithNextSib",
     "paramator": "<div class=\"coverpage\"></div>"
@@ -8,5 +7,15 @@
     "selector": "h2",
     "method": "wrapWithNextSib",
     "paramator": "<div class=\"secheader\"></div>"
+  },
+  {
+    "selector": "h3",
+    "method": "wrapAll",
+    "paramator": ["p", "<div class=\"col2\"></div>"]
+  },
+  {
+    "selector": "h4",
+    "method": "wrapAll",
+    "paramator": ["p", "<div class=\"col2\"></div>"]
   }
 ]

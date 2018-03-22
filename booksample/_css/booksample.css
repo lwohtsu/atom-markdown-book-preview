@@ -96,3 +96,6 @@ p{
   border: none;
   page-break-after: always;
 }
+.col2{
+  border: solid 0.15mm #f00;
+}
