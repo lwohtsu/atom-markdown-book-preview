@@ -1,7 +1,13 @@
-[{
+[
+  {
     "selector": "h1",
     "method": "wrapWithNextSib",
     "paramator": "<div class=\"coverpage\"></div>"
+  },
+  {
+    "selector": "h2+p",
+    "method": "addClass",
+    "paramator": "sectionlead"
   },
   {
     "selector": "h2",

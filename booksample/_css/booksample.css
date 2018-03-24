@@ -80,6 +80,9 @@ body{
 p{
   text-align: justify;
 }
+.sectionlead{
+  color: #f0f;
+}
 
 /* カバーページ */
 .coverpage{
