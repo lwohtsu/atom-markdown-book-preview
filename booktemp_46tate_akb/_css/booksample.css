@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/*リセット*/
+
+html {
+  orphans: 1;
+  widows: 1;
+  font-size: 0.25mm;
+  /*remで級数指定できる*/
+  writing-mode: vertical-rl;
+  line-height: 1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  writing-mode: tb-rl;
+  width: 91mm;
+  font-size: 12rem;
+  line-height: 22rem;
+  margin: auto;
+  counter-reset: number 0;
+  /*セクション番号の連数字に必要（番号をリセットする）*/
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Roboto, Verdana, "游ゴシック", "YuGothic", Meiryo, sans-serif;
+  /* background: #DDD; */
+}
+
+/*ページレイアウト*/
+
+@page {
+  size: 128mm 188mm;
+  margin-top: 22mm;
+  margin-left: 21mm;
+  margin-right: 16mm;
+  margin-bottom: 20mm;
+}
+
+@page :left {
+  margin-left: 16mm;
+  margin-right: 21mm;
+  @left-top {
+    content: "第３章　ＣＳＳの基礎";
+    font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Roboto, Verdana, "游ゴシック", "YuGothic", Meiryo, sans-serif;
+    color: #FFFFFF;
+    padding: 3mm;
+    margin-right: 7mm;
+    font-size: 10rem;
+    height: 25mm;
+    background-color: #FF8C00;
+  }
+  @bottom-left {
+    content: counter(page);
+    font-size: 11rem;
+    margin-bottom: 3mm;
+    writing-mode: horizontal-tb;
+  }
+}
+
+@page :right {
+  margin-left: 21mm;
+  margin-right: 16mm;
+  @bottom-right {
+    font-size: 11rem;
+    margin-bottom: 3mm;
+    content: counter(page);
+    writing-mode: horizontal-tb;
+  }
+}
+
+/*章扉のノンブル、柱を消す(先頭ページの設定)*/
+
+@page :first {
+  @bottom-left {
+    content: none
+  }
+  @left-top {
+    content: none
+  }
+}
+
+/*章扉の設定*/
+
+.coverpage {
+  height: 188mm;
+  width: 128mm;
+  margin-top: -22mm;
+  margin-right: -21mm;
+  padding: 30mm 20mm 0mm 20mm;
+  text-align: center;
+  background: -webkit-repeating-linear-gradient(-45deg, #FFE4B5, #FFE4B5 4px#FFEFD5 3px, #FFEFD5 8px);
+  background: repeating-linear-gradient(-45deg, #FFE4B5, #FFE4B5 4px, #FFEFD5 3px, #FFEFD5 8px);
+  writing-mode: horizontal-tb;
+  page-break-after: always;
+}
+
+.coverpage h1 {
+  line-height: 10mm;
+  background-color: white;
+  padding: 8mm 5mm 8mm 5mm;
+  border-radius: 0.3em;
+  font-size: 28rem;
+}
+
+.coverpage h1:before {
+  content: "第1章\A";
+  white-space: pre;
+  font-size: 22rem;
+}
+
+/* 節見出しの設定 */
+
+.secheader {
+  page-break-before: right;
+  min-width: 18mm;
+  display: flex;
+  align-items: center;
+}
+
+.secheader h2 {
+  line-height: 8mm;
+  height: 110mm;
+  font-size: 28rem;
+  color: #696969;
+  margin-top: 5mm;
+}
+
+.secheader:before {
+  counter-increment: number 1;
+  content: "第" counter(number) "節";
+  /* セクションの連番 */
+  color: #FF8C00;
+  font-size: 26rem;
+  border-top: solid 5px #FF8C00;
+  /*左線（実線 太さ 色）*/
+  border-bottom: solid 5px #FF8C00;
+  width: 18mm;
+  line-height: 18mm;
+  padding: 5mm 0;
+  font-weight: bold;
+  text-orientation: upright;
+}
+
+.secheader+p {
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Roboto, Verdana, "游ゴシック", "YuGothic", Meiryo, sans-serif;
+  font-weight: bold;
+  font-size: 13rem;
+  border-radius: 0.1em;
+  height: 146mm;
+  margin-bottom: 11.5mm;
+  margin-left: 10mm;
+}
+
+p {
+  text-align: justify;
+  /* padding-right: 2mm; */
+  text-indent: 1em;
+  font-size: 13rem;
+  font-family: "游明朝", "YuMincho", serif;
+}
+
+h3 {
+  font-size: 18rem;
+  font-weight: bolder;
+  padding-right: 4mm;
+  border-radius: 0.4em;
+  /*角の丸み*/
+  background: #FF8C00;
+  padding: 0.5em;
+  color: white;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 14rem;
+  padding-right: 4mm;
+  page-break-after: avoid;
+}
+
+h4:before {
+  content: '■';
+  padding-bottom: 1.5mm;
+  color: #FF8C00;
+}
+
+strong {
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Roboto, Verdana, "游ゴシック", "YuGothic", Meiryo, sans-serif;
+}
+
+.figure {
+  position: relative;
+  width: 91mm;
+  -ms-writing-mode: lr-tb;
+  -webkit-writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb;
+}
+
+.figure svg {
+  border: solid 0.1mm #696969;
+}
+
+.figcaption {
+  text-align: left;
+  font-size: 10rem
+}

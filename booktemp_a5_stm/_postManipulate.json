@@ -1,0 +1,28 @@
+[
+  {
+    "selector": "h1",
+    "method": "wrap",
+    "paramator": "<div class=\"coverpage\"></div>"
+  },
+
+
+    {
+        "selector": "h2",
+        "method": "dupRunning",
+        "paramator": "<span class=\"header2\"></span>"
+    },
+
+    {
+        "selector": ".chaterno",
+        "method": "dupRunning",
+        "paramator": "<span class=\"headerno\"></span>"
+    },
+
+    {
+    "selector": "h2",
+    "method": "wrap",
+    "paramator": "<div class=\"secheader\"></div>"
+  }
+
+
+]

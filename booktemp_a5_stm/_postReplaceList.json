@@ -1,0 +1,157 @@
+[
+  {
+    "f": "@div:([a-z|0-9 ]+)",
+    "r": "<div class=\"$1\">"
+  },
+  {
+    "f": "@divend",
+    "r": "<\/div>"
+  },
+  {
+    "f": "<hr>",
+    "r": "<hr class=\"pagebreak\">"
+  },
+  {
+    "f": "@negative:(\\d+)",
+    "r": "<div style=\"margin-top:-$1mm\"><\/div>"
+  },
+  {
+  "f": "@comment:([^@]*)@commend",
+  "r": "<span class=\"comment\">$1<\/span>"
+},
+{
+  "f": "<h6[^>]*>読み下し文<\/h6>",
+  "r": "<h6 class=\"yomikudashi\">読み下し文<\/h6>"
+},
+{
+  "f": "〔",
+  "r": "<span class=\"yk-strong\">"
+},
+{
+  "f": "〕",
+  "r": "<\/span>"
+},
+
+  {
+    "f": "<p>(<div class=\"[^\"]+\">)</p>",
+    "r": "$1"
+  },
+
+  {
+      "f": "<li[^>]*>▶",
+      "r": "<li class=\"aokome\"><span>▶</span>"
+  },
+  {
+      "f": "<li[^>]*>([\u2776-\u277F\u24EB-\u24F4]+)",
+      "r": "<li class=\"akakome\"><span>$1</span>"
+  },
+  {
+      "f": "<span class=\"hljs-comment\"([^>]*)>#←",
+      "r": "<span class=\"hljs-comment codered\"$1>"
+  },
+  {
+      "f": "<span class=\"hljs-comment\"([^>]*)>//←",
+      "r": "<span class=\"hljs-comment codered\"$1>"
+  },
+  {
+      "f": "★<span[^>]*>4<\/span>字下げ",
+      "r": "<span class=\"bluefurigana\">4字下げ<\/span>"
+  },
+  {
+      "f": "★ブロック終了",
+      "r": "<span class=\"bluefurigana2\">ブロック終了<\/span>"
+  },
+  {
+      "f": "<p>【先輩normal】((?!<\/p>).*)<\/p>",
+      "r": "<p class=\"face teacher\">$1<img src=\"_css/img/apron_man1-1smile.png\" style=\"display:none;\"><\/p>"
+  },
+  {
+      "f": "<p>【後輩normal】((?!<\/p>).*)<\/p>",
+      "r": "<p class=\"face student\">$1<img src=\"_css/img/apron_woman1-1smile.png\" style=\"display:none;\"><\/p>"
+  },
+  {
+      "f": "<p>【先輩egao】((?!<\/p>).*)<\/p>",
+      "r": "<p class=\"face teacher teacher-laugh\">$1<img src=\"_css/img/apron_man1-4laugh.png\" style=\"display:none;\"><\/p>"
+  },
+  {
+      "f": "<p>【後輩egao】((?!<\/p>).*)<\/p>",
+      "r": "<p class=\"face student student-laugh\">$1<img src=\"_css/img/apron_woman1-4laugh.png\" style=\"display:none;\"><\/p>"
+  },
+  {
+      "f": "<p>【先輩idea】((?!<\/p>).*)<\/p>",
+      "r": "<p class=\"face teacher teacher-idea\">$1<img src=\"_css/img/apron_man2-1idea.png\" style=\"display:none;\"><\/p>"
+  },
+  {
+      "f": "<p>【後輩idea】((?!<\/p>).*)<\/p>",
+      "r": "<p class=\"face student student-idea\">$1<img src=\"_css/img/apron_woman2-1idea.png\" style=\"display:none;\"><\/p>"
+  },
+  {
+      "f": "<p>【先輩shock】((?!<\/p>).*)<\/p>",
+      "r": "<p class=\"face teacher teacher-shock\">$1<img src=\"_css/img/apron_man2-2shock.png\" style=\"display:none;\"><\/p>"
+  },
+  {
+      "f": "<p>【後輩shock】((?!<\/p>).*)<\/p>",
+      "r": "<p class=\"face student student-shock\">$1<img src=\"_css/img/apron_woman2-2shock.png\" style=\"display:none;\"><\/p>"
+  },
+  {
+      "f": "<p>【先輩hatena】((?!<\/p>).*)<\/p>",
+      "r": "<p class=\"face teacher teacher-hatena\">$1<img src=\"_css/img/apron_man3-1question.png\" style=\"display:none;\"><\/p>"
+  },
+  {
+      "f": "<p>【後輩hatena】((?!<\/p>).*)<\/p>",
+      "r": "<p class=\"face student student-hatena\">$1<img src=\"_css/img/apron_woman3-1question.png\" style=\"display:none;\"><\/p>"
+  },
+
+  {
+    "f": "<p><\/div><\/p>",
+    "r": "<\/div>"
+  },
+  {
+    "f": "<p><\/div>",
+    "r": "<\/div>"
+  },
+  {
+    "f": "<\/div><\/p>",
+    "r": "<\/div>"
+  },
+  {
+    "f": "(<div class=\"[^\"]+\">)</p>",
+    "r": "$1"
+  },
+  {
+    "f": "<p>(<div class=\"[^\"]+\">)",
+    "r": "$1"
+  },
+  {
+    "f": "(<hr class=\"[^\"]+\">)</p>",
+    "r": "$1"
+  },
+  {
+    "f": "<p>(<hr class=\"[^\"]+\">)",
+    "r": "$1"
+  },
+  {
+    "f": "<p>(<svg [^>]+>)<\/p>",
+    "r": "$1"
+  },
+  {
+    "f": "<p>(<image [^>]+>)",
+    "r": "$1"
+  },
+  {
+    "f": "(<image [^>]+>)<\/p>",
+    "r": "$1"
+  },
+  {
+    "f": "<p>(<\/svg>)",
+    "r": "$1"
+  },
+  {
+    "f": "(<\/svg>)<\/p>",
+    "r": "$1"
+  },
+  {
+    "f": "<p><\/p>",
+    "r": ""
+  }
+]
