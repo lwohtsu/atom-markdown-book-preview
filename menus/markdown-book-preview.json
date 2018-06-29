@@ -1,71 +1,95 @@
 {
-  "context-menu": {
-    "atom-text-editor": [
-      {
-        "label": "MDBP:markdown-book-preview",
-        "submenu": [
-          {
-            "label": "Open HTML preview",
-            "command": "markdown-book-preview:toggle"
-          },
-          {
-            "label": "Open VivlioStyle Preview",
-            "command": "markdown-book-preview:toggleVS"
-          },
-          {
-            "label": "Print PDF",
-            "command": "markdown-book-preview:printPDF"
-          },
-          {
-            "label": "Export InDesign XML",
-            "command": "markdown-book-preview:exportXML"
-          },
-          {
-            "label": "Download Template (simple)",
-            "command": "markdown-book-preview:downloadTemplate"
-          },
-          {
-            "label": "Download Template (A5ver1)",
-            "command": "markdown-book-preview:downloadTemplateA5V1"
-          }
-        ]
-      }
-    ]
-  },
-  "menu": [
-    {
-      "label": "Packages",
-      "submenu": [
-        {
-          "label": "MDBP:markdown-book-preview",
-          "submenu": [
-            {
-              "label": "Open HTML Preview",
-              "command": "markdown-book-preview:toggle"
-            },
-            {
-              "label": "Open VivlioStyle Preview",
-              "command": "markdown-book-preview:toggleVS"
-            },
-            {
-              "label": "Print PDF",
-              "command": "markdown-book-preview:printPDF"
-            },
-            {
-              "label": "Export InDesign XML",
-              "command": "markdown-book-preview:exportXML"
-            },
-            {
-              "label": "Download Template (simple)",
-              "command": "markdown-book-preview:downloadTemplate"
-            },
-            {
-              "label": "Download Template (A5ver1)",
-              "command": "markdown-book-preview:downloadTemplateA5V1"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "context-menu": {
+        "atom-text-editor": [{
+            "label": "MDBP:markdown-book-preview",
+            "submenu": [{
+                    "label": "Open HTML preview",
+                    "command": "markdown-book-preview:toggle"
+                },
+                {
+                    "label": "Open VivlioStyle Preview",
+                    "command": "markdown-book-preview:toggleVS"
+                },
+                {
+                    "label": "Print PDF",
+                    "command": "markdown-book-preview:printPDF"
+                },
+                {
+                    "label": "Export InDesign XML",
+                    "command": "markdown-book-preview:exportXML"
+                },
+                {
+                    "label": "Download Template (simple)",
+                    "command": "markdown-book-preview:downloadTemplate"
+                },
+                {
+                    "label": "Download Template (A5ver1)",
+                    "command": "markdown-book-preview:downloadTemplateA5V1"
+                },
+                {
+                    "label": "New Template",
+                    "submenu": [{
+                            "label": "Download New Template (B5_KZMver.)",
+                            "command": "markdown-book-preview:downloadTemplateB5KZM"
+                        },
+                        {
+                            "label": "Download New Template (A5_STMver.)",
+                            "command": "markdown-book-preview:downloadTemplateA5STM"
+                        },
+                        {
+                            "label": "Download New Template (46_AKBver.)",
+                            "command": "markdown-book-preview:downloadTemplate46AKB"
+                        }
+                    ]
+                }
+            ]
+        }]
+    },
+    "menu": [{
+        "label": "Packages",
+        "submenu": [{
+            "label": "MDBP:markdown-book-preview",
+            "submenu": [{
+                    "label": "Open HTML Preview",
+                    "command": "markdown-book-preview:toggle"
+                },
+                {
+                    "label": "Open VivlioStyle Preview",
+                    "command": "markdown-book-preview:toggleVS"
+                },
+                {
+                    "label": "Print PDF",
+                    "command": "markdown-book-preview:printPDF"
+                },
+                {
+                    "label": "Export InDesign XML",
+                    "command": "markdown-book-preview:exportXML"
+                },
+                {
+                    "label": "Download Template (simple)",
+                    "command": "markdown-book-preview:downloadTemplate"
+                },
+                {
+                    "label": "Download Template (A5ver1)",
+                    "command": "markdown-book-preview:downloadTemplateA5V1"
+                },
+                {
+                    "label": "New Template",
+                    "submenu": [{
+                            "label": "Download New Template (B5_KZMver.)",
+                            "command": "markdown-book-preview:downloadTemplateB5KZM"
+                        },
+                        {
+                            "label": "Download New Template (A5_STMver.)",
+                            "command": "markdown-book-preview:downloadTemplateA5STM"
+                        },
+                        {
+                            "label": "Download New Template (46_AKBver.)",
+                            "command": "markdown-book-preview:downloadTemplate46AKB"
+                        }
+                    ]
+                }
+            ]
+        }]
+    }]
 }

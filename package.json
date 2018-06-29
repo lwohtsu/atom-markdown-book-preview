@@ -14,7 +14,10 @@
       "markdown-book-preview:toggleVS",
       "markdown-book-preview:printPDF",
       "markdown-book-preview:exportXML",
-      "markdown-book-preview:downloadTemplate"
+      "markdown-book-preview:downloadTemplate",
+      "markdown-book-preview:downloadTemplateB5KZM",
+      "markdown-book-preview:downloadTemplateA5STM",
+      "markdown-book-preview:downloadTemplate46AKB"
     ]
   },
   "repository": "https://github.com/lwohtsu/atom-markdown-book-preview",
