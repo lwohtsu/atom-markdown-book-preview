@@ -7,7 +7,7 @@
                     "command": "markdown-book-preview:toggle"
                 },
                 {
-                    "label": "Open VivlioStyle Preview",
+                    "label": "Open Vivliostyle Preview",
                     "command": "markdown-book-preview:toggleVS"
                 },
                 {
@@ -54,7 +54,7 @@
                     "command": "markdown-book-preview:toggle"
                 },
                 {
-                    "label": "Open VivlioStyle Preview",
+                    "label": "Open Vivliostyle Preview",
                     "command": "markdown-book-preview:toggleVS"
                 },
                 {
