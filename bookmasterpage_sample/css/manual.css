@@ -1,0 +1,43 @@
+html {
+    orphans: 1;
+    widows: 1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*ページサイズ*/
+@page {
+    size: 210mm 297mm;  /*A4*/
+}
+
+@-epubx-page-template {
+    @import "masterpage_simple.css";
+}
+
+.dummybox{
+    width:80mm;
+    height: 60mm;
+    border:solid 1mm #F88;
+    background: #fff;
+    flex-shrink: 0;
+}
+.dummyboxh{
+    width:170mm;
+    height: 45mm;
+    border:solid 1mm #F88;
+}
+.figurearea{
+    display: flex;
+    justify-content: space-between;
+    overflow: visible;
+}
+
+/* 改段指定 */
+.pagebreak {
+    border: none;
+    break-after: column;
+}

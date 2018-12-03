@@ -1,0 +1,113 @@
+.sect{
+    break-before: page;
+}
+
+.uppersingle {
+    -epubx-flow-into: master-single-flow;
+    break-before: page;
+}
+@-epubx-flow master-single-flow {
+    -epubx-flow-consume: all;
+}
+.figurearea{
+    -epubx-flow-into: figure-area-flow;
+}
+@-epubx-flow figure-area-flow {
+    -epubx-flow-consume:all;
+}
+
+@-epubx-page-master main {
+    /* 背景装飾 */
+    @-epubx-partition back1{
+        top:0;
+        left: 0;
+        width: 210mm;
+        height: 297mm;
+        background: #6D6;
+    }
+    @-epubx-partition back2{
+        -epubx-enabled: -epubx-expr( page-number % 2==0);
+        top:15mm;
+        left: 10mm;
+        width: 200mm;
+        height: 267mm;
+        background: #FFF;
+    }
+    @-epubx-partition back2{
+        -epubx-enabled: -epubx-expr( page-number % 2==1);
+        top:15mm;
+        left: 0;
+        width: 200mm;
+        height: 267mm;
+        background: #FFF;
+    }
+    /* 二段組み領域 */
+    @-epubx-partition col2{
+        -epubx-flow-from: body;
+        -epubx-required: true;
+        top: 25mm;
+        left: 20mm;
+        width: 170mm;
+        height: 247mm;
+        overflow: visible;
+        /*段数*/
+        -webkit-column-count: 2;
+        column-count: 2;
+        /*段間*/
+        -webkit-column-gap: 8mm;
+        column-gap: 8mm;
+        /*罫線*/
+        -webkit-column-rule: dotted 0.5mm #000;
+        column-rule: dotted 0.5mm #000;
+        column-fill: auto;
+        background: #EFF;
+    }
+    /* 一段組み領域 */
+    @-epubx-partition col1{
+        -epubx-flow-from: master-single-flow;
+        top: 25mm;
+        left: 20mm;
+        width: 170mm;
+        background: #FFE;
+        overflow: visible;
+        padding-bottom: 10mm;
+    }
+    /* 画像エリア */
+    @-epubx-partition figure-area{
+        -epubx-flow-from: figure-area-flow;
+        bottom: 25mm;
+        left: 20mm;
+        width: 170mm;
+        max-height: 65mm;
+        background: #FFF;
+        overflow: visible;
+        padding-top: 5mm;
+    }
+    /*偶数ノンブル*/
+    @-epubx-partition {
+        -epubx-enabled: -epubx-expr( page-number % 2==0);
+        content: counter(page);
+        position: absolute;
+        bottom: 5mm;
+        left: 15mm;
+        width: 170mm;
+        height: 5mm;
+        text-align: left;
+        font-size: 12pt;
+        color: #000;
+    }
+    /*奇数ノンブル*/
+    @-epubx-partition {
+        -epubx-enabled: -epubx-expr( page-number % 2==1);
+        content:  counter(page);
+        position: absolute;
+        bottom: 5mm;
+        right: 15mm;
+        width: 170mm;
+        height: 5mm;
+        background-color: 0;
+        text-align: right;
+        font-size: 12pt;
+        color: #000;
+    }
+}
