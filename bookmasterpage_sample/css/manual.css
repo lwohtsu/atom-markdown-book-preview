@@ -18,6 +18,17 @@ html {
     @import "masterpage_simple.css";
 }
 
+ul, ol{
+    margin: 5mm 0;
+    margin-left: 4mm;
+    font-weight: bold;
+}
+.ol_level2{
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: lower-alpha;
+}
+
 .dummybox{
     width:80mm;
     height: 60mm;
@@ -40,4 +51,19 @@ html {
 .pagebreak {
     border: none;
     break-after: column;
+}
+
+/* カバーページ */
+.coverpage{
+    position: absolute;
+    width: 210mm;
+    height: 297mm;
+    background: #FFE;
+    top: -25mm;
+    left: -20mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
 }

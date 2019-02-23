@@ -1,0 +1,8 @@
+[
+  {
+    "selector": "div>ol>li>ol",
+    "method": "addClass",
+    "paramator": "ol_level2"
+  }
+
+]

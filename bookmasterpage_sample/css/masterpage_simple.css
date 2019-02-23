@@ -65,6 +65,7 @@
         background: #FFE;
         overflow: visible;
         padding-bottom: 10mm;
+        max-width: 247mm;
     }
 
     /*偶数ノンブル*/
