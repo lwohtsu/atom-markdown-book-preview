@@ -1,6 +1,9 @@
 @div:coverpage
 # タイトルページ
 @divend
+@div:runninghead
+ランニングヘッド
+@divend
 
 ---
 @div:sect

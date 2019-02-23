@@ -9,6 +9,11 @@
 @-epubx-flow master-single-flow {
     -epubx-flow-consume: all;
 }
+.runninghead {
+  -epubx-flow-into: master-running-flow;
+  -epubx-flow-options: static exclusive last;
+  text-align: right;
+}
 
 @-epubx-page-master main {
     /* 背景装飾 */
@@ -92,6 +97,19 @@
         height: 5mm;
         background-color: 0;
         text-align: right;
+        font-size: 12pt;
+        color: #000;
+    }
+    /* 柱 */
+    @-epubx-partition{
+        -epubx-enabled: -epubx-expr( page-number % 2==1);
+        -epubx-flow-from: master-running-flow;
+        position: absolute;
+        top: 5mm;
+        right: 15mm;
+        width: 170mm;
+        height: 5mm;
+        background-color: 0;
         font-size: 12pt;
         color: #000;
     }
