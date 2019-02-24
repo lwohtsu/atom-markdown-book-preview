@@ -29,6 +29,10 @@ ul, ol{
     list-style-type: lower-alpha;
 }
 
+img{
+    max-width: 100%;
+}
+
 .dummybox{
     width:80mm;
     height: 60mm;
