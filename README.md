@@ -90,8 +90,34 @@ InDesignの［構造］パネルで読み込み可能なXMLファイルを書き
 
 ![](docimg-5.png)
 
-## 予定
-- svgimgによる倍率とトリミング指定をGUIで行えるようにする機能の追加
+## postManipulate（後操作）機能
+まだまだ実験的な機能ですが、Markdownをいじらずにデザイン都合でHTML構造を自動変更する機能を追加しました。見出しのデザインを凝ったものにするために、@div:secheader～@divendといったタグ風のレイアウト指示コードを入れる仕様としていますが、Markdownの標準ルールから離れてしまい、記述が面倒になるという問題があります。そこで、jQueryに似た機能を持つcheerioというライブラリを利用し、h2とpが並んでいたらdiv要素で囲むよう機能を追加しています。
+
+操作内容は_postManipurate.jsonというファイルに「セレクタ」「メソッド」「パラメータ」を指定する形にしているので、プロジェクトごとに設定変更が可能です。
+```
+[
+  {
+    "selector": "h1",
+    "method": "wrapWithNextSib",  // h1要素とその次の要素をdiv.coverpageでラップする
+    "paramator": "<div class=\"coverpage\"></div>"
+  },
+  {
+    "selector": "h2",
+    "method": "wrap",     // h2要素をdiv.secheaderでラップする
+    "paramator": "<div class=\"secheader\"></div>"
+  },
+    "selector": "h3",
+    "method": "wrapAll",  // h3要素の直後にある複数のp要素をすべてdiv.col2でラップする
+    "paramator": ["p", "<div class=\"col2\"></div>"]
+  },
+  {
+    "selector": "h2",
+    "method": "dupRunning",  // 柱のためにh2のテキストを複製してspan.header2という要素を作成する
+    "paramator": "<span class=\"header2\"></span>"
+  }
+]
+```
+
 
 (c)libroworks.co.jp
 http://libroworks.co.jp/
