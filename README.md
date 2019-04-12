@@ -98,23 +98,27 @@ InDesignの［構造］パネルで読み込み可能なXMLファイルを書き
 [
   {
     "selector": "h1",
-    "method": "wrapWithNextSib",  // h1要素とその次の要素をdiv.coverpageでラップする
+    "method": "wrapWithNextSib",  // h1要素とその次の1要素をdiv.coverpageでラップする（見出しとリード文のグループ化）
     "paramator": "<div class=\"coverpage\"></div>"
   },
   {
     "selector": "h2",
-    "method": "wrap",     // h2要素をdiv.secheaderでラップする
+    "method": "wrap",     // h2要素をdiv.secheaderでラップする（h2要素に装飾用のdivを追加）
     "paramator": "<div class=\"secheader\"></div>"
   },
     "selector": "h3",
-    "method": "wrapAll",  // h3要素の直後にある複数のp要素をすべてdiv.col2でラップする
+    "method": "wrapAll",  // h3要素の直後にある複数のp要素をすべてdiv.col2でラップする（見出しの下の段落を2段組みに）
     "paramator": ["p", "<div class=\"col2\"></div>"]
   },
   {
     "selector": "h2",
-    "method": "dupRunning",  // 柱のためにh2のテキストを複製してspan.header2という要素を作成する
+    "method": "dupRunning",  // h2要素のテキストを複製してspan.header2という要素を作成する（柱テキストの作成）
     "paramator": "<span class=\"header2\"></span>"
-  }
+  },
+    "selector": "p code",
+    "method": "addClass",  // p要素内のcode要素にinline_codeというクラスを追加する
+    "paramator": "inline_code"
+  },
 ]
 ```
 
