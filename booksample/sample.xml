@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><story xmlns:aid5="http://ns.adobe.com/AdobeInDesign/5.0/" xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0/"><body>
-<div_coverpage><h1_coverpage>章タイトル</h1_coverpage><p_coverpage>本文</p_coverpage></div_coverpage>
+<div_coverpage><h1_coverpage>&#x7AE0;&#x30BF;&#x30A4;&#x30C8;&#x30EB;</h1_coverpage><p_coverpage>&#x672C;&#x6587;</p_coverpage></div_coverpage>
 
-<div_secheader><h2_secheader>節タイトル</h2_secheader><p_secheader>本文</p_secheader></div_secheader>
+<div_secheader><h2_secheader>&#x7BC0;&#x30BF;&#x30A4;&#x30C8;&#x30EB;</h2_secheader><p_secheader>&#x672C;&#x6587;&#x672C;&#x6587;</p_secheader></div_secheader>
 
-<p>本文</p>
+<h3>&#x4E2D;&#x898B;&#x51FA;&#x3057;</h3>
+<div_col2><p_col2>&#x672C;&#x6587;1a</p_col2><p_col2>&#x672C;&#x6587;2b</p_col2></div_col2>
+
 <hr_pagebreak/>
-<p>本文</p>
+<h4>&#x5C0F;&#x898B;&#x51FA;&#x3057;</h4>
+<div_col2><p_col2>&#x672C;&#x6587;3c</p_col2></div_col2>
+<h3>&#x4E2D;&#x898B;&#x51FA;&#x3057;</h3>
+<div_col2><p_col2>&#x672C;&#x6587;1a</p_col2><p_col2>&#x672C;&#x6587;2b</p_col2></div_col2>
+
 
   
 
