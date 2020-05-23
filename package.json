@@ -10,7 +10,9 @@
   ],
   "activationCommands": {
     "atom-workspace": [
-      "markdown-book-preview:startServer"
+      "markdown-book-preview:startServer",
+      "markdown-book-preview:toggle",
+      "markdown-book-preview:toggleVS"
     ]
   },
   "repository": "https://github.com/lwohtsu/atom-markdown-book-preview",
