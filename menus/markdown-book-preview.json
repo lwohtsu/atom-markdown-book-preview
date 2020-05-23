@@ -3,6 +3,10 @@
         "atom-text-editor": [{
             "label": "MDBP:markdown-book-preview",
             "submenu": [{
+                    "label": "Start Live Server",
+                    "command": "markdown-book-preview:startServer"
+                },
+                {
                     "label": "Open HTML preview",
                     "command": "markdown-book-preview:toggle"
                 },
@@ -11,12 +15,12 @@
                     "command": "markdown-book-preview:toggleVS"
                 },
                 {
-                    "label": "Print PDF",
-                    "command": "markdown-book-preview:printPDF"
-                },
-                {
                     "label": "Export InDesign XML",
                     "command": "markdown-book-preview:exportXML"
+                },
+                {
+                    "label": "Stop Live Server",
+                    "command": "markdown-book-preview:stopServer"
                 },
                 {
                     "label": "Download Template (simple)",
@@ -54,16 +58,20 @@
                     "command": "markdown-book-preview:toggle"
                 },
                 {
+                    "label": "Start Live Server",
+                    "command": "markdown-book-preview:startServer"
+                },
+                {
                     "label": "Open Vivliostyle Preview",
                     "command": "markdown-book-preview:toggleVS"
                 },
                 {
-                    "label": "Print PDF",
-                    "command": "markdown-book-preview:printPDF"
-                },
-                {
                     "label": "Export InDesign XML",
                     "command": "markdown-book-preview:exportXML"
+                },
+                {
+                    "label": "Stop Live Server",
+                    "command": "markdown-book-preview:stopServer"
                 },
                 {
                     "label": "Download Template (simple)",

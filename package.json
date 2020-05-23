@@ -10,14 +10,7 @@
   ],
   "activationCommands": {
     "atom-workspace": [
-      "markdown-book-preview:toggle",
-      "markdown-book-preview:toggleVS",
-      "markdown-book-preview:printPDF",
-      "markdown-book-preview:exportXML",
-      "markdown-book-preview:downloadTemplate",
-      "markdown-book-preview:downloadTemplateB5KZM",
-      "markdown-book-preview:downloadTemplateA5STM",
-      "markdown-book-preview:downloadTemplate46AKB"
+      "markdown-book-preview:startServer"
     ]
   },
   "repository": "https://github.com/lwohtsu/atom-markdown-book-preview",
@@ -31,6 +24,7 @@
     "highlight.js": "^9.13.1",
     "image-size": "^0.6.3",
     "jsdom": "^11.12.0",
+    "live-server": "^1.2.1",
     "lodash": "^4.17.15",
     "marked": "^0.3.19",
     "node-static": "^0.7.11",
