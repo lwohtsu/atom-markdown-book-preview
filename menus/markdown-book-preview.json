@@ -53,13 +53,14 @@
         "label": "Packages",
         "submenu": [{
             "label": "MDBP:markdown-book-preview",
-            "submenu": [{
-                    "label": "Open HTML Preview",
-                    "command": "markdown-book-preview:toggle"
-                },
+            "submenu": [
                 {
                     "label": "Start Live Server",
                     "command": "markdown-book-preview:startServer"
+                },
+                {
+                    "label": "Open HTML Preview",
+                    "command": "markdown-book-preview:toggle"
                 },
                 {
                     "label": "Open Vivliostyle Preview",
