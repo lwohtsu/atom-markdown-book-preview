@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "chokidar": "^2.1.8",
+    "chokidar": "^3",
     "highlight.js": "^9.13.1",
     "image-size": "^0.6.3",
     "live-server": "file:lib\\live-server",
