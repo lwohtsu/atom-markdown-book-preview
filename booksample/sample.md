@@ -1,3 +1,5 @@
+<p id="pagetitle">ページタイトルにしたいテキスト</p>
+
 # 章タイトル
 本文addgkmnopqe
 
