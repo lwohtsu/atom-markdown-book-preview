@@ -27,7 +27,7 @@
     "connect": "^3.7.0",
     "event-stream": "^4.0.1",
     "faye-websocket": "^0.11.3",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.4.1",
     "http-proxy": "^1.18.1",
     "image-size": "^0.6.3",
     "jsdom": "^11.12.0",
